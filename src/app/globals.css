@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-color: 255, 255, 255; /* Set background color to white */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-color: 0, 0, 0; /* Keep dark mode background dark */
+  }
+}
+
+body {
+  background-color: #ffffff; /* White background for light theme */
+  color: #000000; /* Black text for light theme */
+}
+
+body.dark {
+  background-color: #000000; 
+  color: #ffffff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
